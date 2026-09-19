@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>coffee-house</title>
+  <title>Coffee House</title>
 </head>
+
 <body>
+  <div class="container">
+    <header class="header">
+      <a href="/index.html" class="header__logo">
+        <img src="images/logo.svg" alt="logo" class="header__logo-image" />
+      </a>
+      <button class="header__btn"></button>
+      <div class="header__nav">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="/index.html#favorite-coffee" class="nav__link">Favorite coffee</a></li>
+            <li class="nav__item"><a href="/index.html#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="/index.html#mobile" class="nav__link">Mobile app</a></li>
+            <li class="nav__item"><a href="#contacts" class="nav__link">Contact us</a></li>
+          </ul>
+        </nav>
+
+        <a class="header__link header__link--active header__link--menu">
+          <span>Menu</span>
+          <img src="images/coffee-cup.svg" alt="icon cup" />
+        </a>
+      </div>
+    </header>
+  </div>
   <script type="module" src="/src/js/menu.js"></script>
 </body>
+
 </html>

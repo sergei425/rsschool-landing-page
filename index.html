@@ -1,12 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>coffee-house</title>
-  </head>
-  <body>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee House</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="" class="header__logo">
+        <img src="images/logo.svg" alt="logo" class="header__logo-image" />
+      </a>
+      <button class="header__btn"></button>
+      <div class="header__nav">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#favorite-coffee" class="nav__link">Favorite coffee</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#mobile" class="nav__link">Mobile app</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="/menu.html" class="header__link">
+          <span>Menu</span>
+          <img src="images/coffee-cup.svg" alt="icon cup" />
+        </a>
+      </div>
+    </header>
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>
