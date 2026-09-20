@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+	--text-primary: #403f3d;
+	--text-inverse: #e1d4c9;
+	--text-accent: #b0907a;
+	--background-page: #e1d4c9;
+	--background-container: #665f55;
+	--background-overlay: rgba(64, 63, 61, 0.8);
+	--border-primary: #c1b6ad;
+	--border-inverse: #665f55;
+	--text-primary: #403f3d;
+	--dark-text-primary: #e1d4c9;
+	--dark-text-inverse: #e1d4c9;
+	--dark-text-accent: #b0907a;
+	--dark-bg-page: #292826;
+	--dark-bg-container: #403f3d;
+	--dark-bg-overlay: rgba(41, 40, 38, 0.8);
+	--dark-border-primary: #665f55;
+	--dark-border-inverse: #c1b6ad;
+	--background-modal: #e1d4c9;
+	--background-modalcontrol: #665f55;
+	--dark-bg-modal: var(--dark-bg-container);
+	--dark-bg-modal-control: var(--dark-bg-page);
+  --font-family: "Inter", sans-serif;
+  --second-family: "Manrope", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $inter;
+  font-size: 16px;
+  color: $text-color-dark;
+  font-weight: 400;
+  background-color: $background-color-body;
+}
+
+.body-active--modal {
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 20px 16px;
+  margin: 0 auto;
+  box-sizing: inherit;
+}
+
+@media #{$tablet} {
+  .container {
+  padding: 20px 40px;
+}
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-style: normal;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+
+  span {
+    font-style: italic;
+    color: $text-color-accent;
+  }
+}
+
+@media #{$tablet} {
+  .title {
+    font-size: 60px;
+  }
+}
