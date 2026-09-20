@@ -1,0 +1,115 @@
+.mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 100px;
+
+    &::after {
+        width: 100%;
+        height: 348px;
+        display: block;
+        content: '';
+        background-image: url('/images/mobile.png');
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 348px 348px;
+        background-size: contain;
+    }
+
+}
+
+.mobile__title {
+    margin-bottom: 40px;
+    color: $text-color-dark;
+}
+
+.mobile__text {
+    margin-bottom: 40px;
+    color: $text-color-dark;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-style: normal;
+    line-height: 150%;
+}
+
+.mobile__store-link {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile__link-app,
+.mobile__link-google {
+    display: flex;
+    gap: 8px;
+    width: 200px;
+    padding: 12px 20px;
+    border-radius: 100px;
+    border: 1px solid $border-color-dark;
+    transition: background-color 0.3s;
+
+    span span {
+        display: block;
+        color: $text-color-dark;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        transition: color 0.3s;
+
+        &:first-of-type {
+            font-size: 10px;
+            line-height: 140%;
+        }
+    }
+
+    svg {
+        transition: fill 0.3s;
+    }
+
+    &:hover {
+        background-color: $background-color-container;
+
+        svg {
+            path {
+                fill: $background-color-body;
+            }
+        }
+
+        span {
+            color: $background-color-body;
+        }
+    }
+}
+
+@media #{$tablet} {
+    .mobile {
+        &::after {
+            height: 630px;
+            background-size: 630px 630px;
+        }
+
+    }
+
+    .mobile__wrap {
+    margin-bottom: 60px;
+}
+
+    .mobile__store-link {
+        flex-direction: row;
+    }
+
+}
+
+@media #{$desktop} {
+    .mobile {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .mobile__wrap {
+        width: 50%;
+    }
+
+}

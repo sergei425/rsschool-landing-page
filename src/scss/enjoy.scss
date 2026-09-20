@@ -1,0 +1,104 @@
+.enjoy {
+  min-width: 348px;
+  height: 552px;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  position: relative;
+  margin-bottom: 100px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+video {
+    object-fit: cover;
+    min-width: 100%;
+    height: auto;
+}
+
+.enjoy__wrap {
+    position: absolute;
+    padding: 60px 16px;
+    z-index: 3;
+}
+
+.enjoy__title {
+  margin-bottom: 40px;
+  color: $text-color-light;
+  font-size: 42px;
+  line-height: 115%;
+}
+
+.enjoy__subtitle {
+  margin-bottom: 40px;
+  color: $text-color-light;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 150%;
+}
+
+.enjoy__link {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  width: 200px;
+  color: $text-color-dark;
+  font-weight: 600;
+  line-height: 150%;
+  border-radius: 100px;
+  background-color: $background-color-body;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url("/images/coffee-cup.svg");
+    transition: all 0.3s ease;
+  }
+}
+
+@media #{$tablet} {
+  .enjoy {
+    min-width: 650px;
+    height: 644px;
+}
+
+  .enjoy__wrap {
+    width: 650px;
+    padding: 100px 60px;
+  }
+
+  .enjoy__title {
+    font-size: 72px;
+    line-height: 105%;
+  }
+}
+
+@media #{$desktop} {
+  .enjoy {
+    width: 1360px;
+  }
+
+  .enjoy__wrap {
+    width: 730px;
+    padding: 100px;
+  }
+
+  .enjoy__link {
+    &::after {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 20px;
+      height: 20px;
+      opacity: 1;
+    }
+  }
+}
