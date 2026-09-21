@@ -1,0 +1,39 @@
+.social {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 45px;
+}
+
+.social__link {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid $border-color-light;
+  transition: background-color 0.3s;
+
+  svg path {
+    transition: stroke 0.3s;
+  }
+
+  &:hover {
+    background-color: $background-color-body;
+
+    svg path {
+      stroke: $text-color-dark;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .social {
+    margin-bottom: 108px;
+  }
+}
+@media #{$desktop} {
+  .social {
+    margin-bottom: 0;
+  }
+}
