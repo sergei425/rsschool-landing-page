@@ -3,7 +3,8 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
   z-index: 30;
 
@@ -90,6 +91,49 @@
   }
 }
 
+.header__wrap {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .header__theme {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 100px;
+    border: 1px solid $border-color-dark;
+    transition: all 0.3s ease;
+
+    span {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--text-accent);
+      border-radius: 100px;
+    }
+    &:hover span.header__dark {
+        background-color: var(--background-container);
+        transition: all 0.3s ease;
+
+        svg path {
+          transition: all 0.3s ease;
+          fill: var(--text-inverse);
+        }
+    }
+  }
+  span.header__dark {
+    background-color: transparent;
+  }
+  .header__theme-toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
 .header__btn {
   position: relative;
   width: 44px;
@@ -139,11 +183,12 @@
   .header {
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-between;
   }
 
   .header__nav {
     position: static;
-    width: 100%;
+    width: 70%;
     height: auto;
     margin: 0;
     padding: 0;
@@ -166,47 +211,10 @@
   }
 }
 
-@media #{$desktop} {
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  .header__wrap {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-  }
-
-  .header__theme {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    padding: 5px;
-    border-radius: 100px;
-    border: 1px solid $border-color-dark;
-    transition: all 0.3s ease;
-
-    span {
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--text-accent);
-      border-radius: 100px;
-    }
-    &:hover span.header__dark {
-        background-color: var(--background-container);
-        transition: all 0.3s ease;
-
-        svg path {
-          fill: var(--text-inverse);
-        }
-    }
-  }
-  span.header__dark {
-    background-color: transparent;
-  }
-}
+// @media #{$desktop} {
+//   .header {
+//     display: flex;
+//     align-items: center;
+    
+//   }
+// }
