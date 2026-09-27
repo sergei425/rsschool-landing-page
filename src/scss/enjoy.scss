@@ -77,16 +77,7 @@ video {
   }
 }
 
-@media #{$desktop} {
-  .enjoy {
-    width: 1360px;
-  }
-
-  .enjoy__wrap {
-    width: 730px;
-    padding: 100px;
-  }
-
+@media (min-width: 960px) {
   .enjoy__link {
     &::after {
       width: 0;
@@ -100,5 +91,16 @@ video {
       height: 20px;
       opacity: 1;
     }
+  }
+}
+
+@media #{$desktop} {
+  .enjoy {
+    width: 1360px;
+  }
+
+  .enjoy__wrap {
+    width: 730px;
+    padding: 100px;
   }
 }
