@@ -10,6 +10,7 @@ menuBtn.addEventListener('click', () => {
     header.classList.toggle("header--show-menu");
     headerNav.classList.toggle("header__nav--show");
     link.classList.toggle("header__link--show-menu");
+    document.body.classList.add("body-active--modal");
 })
 
 
@@ -19,6 +20,7 @@ headerNav.addEventListener('click', (evt) => {
        headerNav.classList.remove("header__nav--show");
        header.classList.remove("header--show-menu");
        link.classList.remove("header__link--show-menu");
+       document.body.classList.remove("body-active--modal");
     }
 })
 
@@ -28,5 +30,6 @@ window.addEventListener("resize", () => {
         headerNav.classList.remove("header__nav--show");
         header.classList.remove("header--show-menu");
         link.classList.remove("header__link--show-menu");
+        document.body.classList.remove("body-active--modal");
     }
 });
