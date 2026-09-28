@@ -57,10 +57,10 @@ sliderToggle.addEventListener("click", (evt) => {
 
 prev?.addEventListener("click", () => {
   baz();
-  timer.clearTimeout();
+  clearTimeout(timer);
 });
 
 next?.addEventListener("click", () => {
   foo();
-  timer.clearTimeout();
+  clearTimeout(timer);
 });
