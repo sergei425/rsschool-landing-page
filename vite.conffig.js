@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(import.meta.dirname, 'index.html'),
-        menu: resolve(import.meta.dirname, 'menu/index.html'),
+        index: resolve(import.meta.dirname, 'index.html'),
+        nested: resolve(import.meta.dirname, 'menu.html'),
       },
     },
   },

@@ -25,7 +25,7 @@ controls?.addEventListener("click", (evt) => {
 
 function getMarkup(card, filter, index) {
   return `<li class="menu__item" id="${card.id}" data-item="${card.name}">
-              <img src="../public/images/${filter}/${filter}-${index + 1}.png" alt="${
+              <img src="images/${filter}/${filter}-${index + 1}.png" alt="${
                 card.name
               } photo" class="slider__image">
               <div class="menu__item-wrap">
